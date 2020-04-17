@@ -15,11 +15,8 @@ while (
 ) {
   message = 'Введите число!';
   alert(message);
-  wantsToBuy = Number(prompt('Сколько дроидов желаете купить?'));
+  wantsToBuy = prompt('Сколько дроидов желаете купить?');
 }
-
-// Почему после первого ввода не числа (сработал цикл while), при нажатии cancel - wantsToBuy возвращает 0 а не null?
-
 if (wantsToBuy === null) {
   message = 'Отменено пользователем!';
   alert(message);
@@ -27,9 +24,6 @@ if (wantsToBuy === null) {
   message = 'Недостаточно средств на счету!';
   alert(message);
 } else {
-  // И после того как поступил 0, а ожидался null, срабатывает не та ветка ((
-  console.log(wantsToBuy); // вот здесь я это получил
-
   balanceOfCredits = credits - Number(wantsToBuy) * pricePerDroid;
   message = `Вы купили ${wantsToBuy} дроидов, на счету осталось ${balanceOfCredits} кредитов.`;
   alert(message);
