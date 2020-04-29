@@ -13,7 +13,7 @@ const isLoginValid = function (login) {
 let allLogins = logins;
 
 const isLoginUnique = function (allLogins, login) {
-  for (const item of logins) {
+  for (const item of allLogins) {
     if (item === login) {
       return false;
     }

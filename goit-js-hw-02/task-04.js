@@ -1,17 +1,27 @@
 'use strict';
 
 const formatString = function (string) {
-  const arrayFromString = string.split('');
+  // 1 вариант
 
-  if (arrayFromString.length > 40) {
-    const adjustedArray = arrayFromString.slice(0, 40);
-    const stringFromArray = adjustedArray.join('');
+  // const arrayFromString = string.split('');
 
-    return `${stringFromArray} ...`;
+  // if (arrayFromString.length > 40) {
+  //   const adjustedArray = arrayFromString.slice(0, 40);
+  //   const stringFromArray = adjustedArray.join('');
+
+  //   return `${stringFromArray}...`;
+  // } else {
+  //   const stringFromArray = arrayFromString.join('');
+
+  //   return stringFromArray;
+  // }
+
+  // 2 вариант
+
+  if (string.length > 40) {
+    return `${string.slice(0, 40)}...`;
   } else {
-    const stringFromArray = arrayFromString.join('');
-
-    return stringFromArray;
+    return string;
   }
 };
 
